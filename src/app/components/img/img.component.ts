@@ -6,17 +6,15 @@ import { AfterViewInit, Component, EventEmitter, Input, OnChanges, OnDestroy, On
   styleUrls: ['./img.component.css']
 })
 export class ImgComponent implements AfterViewInit, OnChanges, OnDestroy, OnInit {
-  img: string = '';
+  img = '';
   @Input('img') set changeImg(newImg: string) {
     this.img = newImg;
     console.log('change just img => ', this.img);
   }
   @Output() loaded = new EventEmitter<string>();
-  imgDefault: string = './assets/img/default.png';
+  imgDefault = './assets/img/default.png';
   // counter: number = 0;
   // counteFn: number | undefined;
-
-  constructor() { }
 
   ngOnInit(): void {
     // Before render

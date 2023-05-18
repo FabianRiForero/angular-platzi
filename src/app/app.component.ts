@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   imgParent = '';
-  showImg: boolean = true;
+  showImg = true;
 
   onLoaded(img: string): void {
     console.log('Log Parent', img);
